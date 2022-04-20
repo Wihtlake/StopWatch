@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: rgba(13, 13, 13);
+}
+.main_timer_container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+}
+.data_time_container{ /* flex */
+}
+.data_list{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.data_list li{
+    list-style: none;
+    font-size: 15vw;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.button_container{/* flex */
+    display: flex;
+    margin: 100px auto;
+    width: 100%;
+
+}
+.form_button_container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.btn__start, .btn__stop, .btn__resert{
+    font-size: 50pt;
+    height: 220px;
+    width: 220px;
+    padding-bottom: 20px;
+    border-radius: 50%;
+    border: transparent;
+    cursor: pointer;
+    border: 7px solid rgba(13, 13, 13);
+    font-weight: 100;
+}
+.btn__start{
+    background:rgba(19, 54, 24);
+    color: rgba(58, 216, 96);
+    Box-shadow:0px 0px 0px 9px rgba(19, 54, 24);
+}
+.btn__stop{
+    display: none;
+    background:rgba(72, 18, 18);
+    color: rgba(255, 42, 37);
+    Box-shadow:0px 0px 0px 9px rgba(72, 18, 18);
+}
+.btn__resert{
+    display: none;
+    background:rgba(61, 61, 61);
+    color: rgba(255, 255, 255);
+    Box-shadow:0px 0px 0px 9px rgba(61, 61, 61);
+}
+@media only screen and (max-width: 746px) {
+    button::before{
+        content: "";
+        display: inline-block;
+        padding-top: 20px;
+        vertical-align: middle;
+        height: 100%;
+    }
+    .btn__start{
+        background:rgba(19, 54, 24);
+        color: rgba(58, 216, 96);
+        Box-shadow:0px 0px 0px 6px rgba(19, 54, 24);
+        
+    }
+    .btn__stop{
+        display: none;
+        background:rgba(72, 18, 18);
+        color: rgba(255, 42, 37);
+        Box-shadow:0px 0px 0px 6px rgba(72, 18, 18);
+    }
+    .btn__resert{
+        display: none;
+        background:rgba(61, 61, 61);
+        color: rgba(255, 255, 255);
+        Box-shadow:0px 0px 0px 6px rgba(61, 61, 61);
+    }
+    .btn__start, .btn__stop, .btn__resert{
+        font-size: 7vw;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: transparent;
+        cursor: pointer;
+        border: 3px solid rgba(13, 13, 13);
+        font-weight: 100;
+    }
+    .data_list_elem_hours, .data_list_elem_dot, .data_list_elem_minute, .data_list_elem_second, .data_list_elem_mili-seconds{
+        list-style: none;
+        font-size: 20vw;
+        letter-spacing: 0px;
+        color: white;
+    }
+    
+}
