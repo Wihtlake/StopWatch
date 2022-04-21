@@ -58,8 +58,7 @@ startbtn.onclick = function(){
 
             }
     }
-    timerID3 = setInterval(function(){
-        counter_second++;
+    timerID3 = function(){
         if(counter_second >= 60){
             counter_second = 0;
             counter_minute++;
@@ -72,13 +71,15 @@ startbtn.onclick = function(){
                 second.innerHTML = `${'' + counter_second}`;
             }    
 
-    }, 1000)
+    }
 
     timerID4 = setInterval(function(){
         counter_miliseconds++;
 
-        if(counter_miliseconds > 100){
+        if(counter_miliseconds >= 100){
             counter_miliseconds = 0;
+            counter_second++;
+            timerID3();
         }
         else if( counter_miliseconds < 10){
             seconds.innerHTML= `${'0' + counter_miliseconds}`;
